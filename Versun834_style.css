@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+/*Haut de page */
+header {
+    background-color: #00e9ff;
+    background-size: cover;
+}
+header nav {
+    padding: 30px 5% 0 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav h1 {
+    margin: 0px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+header nav .right {
+    display: flex;
+    align-items: center;
+}
+header nav .right p {
+    margin: 0 15px 0 0;
+    color: #f2f2f2;
+}
+header nav .right p:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+header nav .right button {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: inherit;
+    border: 1px solid #ff0000;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+header nav .right button:hover {
+    color: inherit;
+    background-color: #ff0000;
+}
+
+/*Première partie */
+.presentation {
+    padding: 30px 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d6fbff;
+}
+.presentation .product-presentation { 
+    width: 100% ;
+    flex-shrink: 3 ;
+}
+.presentation .product-presentation h1 {
+    margin: 0px;
+    padding: 0px 0px 0px 50px;
+    font-size: 2vw;
+    width: 80% ;
+    color: #000000;
+}
+.presentation .product-presentation p {
+    font-weight: 300 ;
+    color: #000000;
+}
+
+/*Pop-up */
+.box .button {
+    padding: 0.5rem;
+    color: #009b9b;
+    border: 1px solid #009b9b;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    background: inherit;
+    transition: all 0.5s ease-out;
+}
+.box .button:hover {
+    color: #ffffff;
+    background: #009b9b;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+    color: #000000;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 12.5rem auto;
+    padding: 2rem;
+    background-color: #5E2F02;
+    border-radius: 5px;
+    width: 35%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.popup h2 {
+    position: absolute;
+    top: -1rem;
+    right: 7.75rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+.popup .Rec {
+    position: absolute;
+    top: 12rem;
+    right: 23.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+.popup .cross {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+.popup .cross:hover {
+    color: #ccc;
+}
+.popup img {
+    width:125px;
+    margin: 10px 20px;
+    margin-top: 40px;
+    border-color: #7c3d02;
+    background: inherit;
+}
+.popup button:hover {
+    border-color: #6b3402;
+    background-color: #7c3d02;
+}
+.popup .button2 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #ffffff;
+}
+
+/*Pieds de Page */
+footer {
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-decoration: none;
+}
+.colomn {
+    text-decoration: none;
+}
+footer h3 {
+    color: #ff0000
+}
+footer p {
+    cursor: pointer;
+    color: #ccc ;
+}
+footer p:hover {
+    color:white;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        background-image: url(FondMobile1.png);
+        background-size: cover;
+    }
+
+    .box .button {
+        padding: 5px 15px;
+        font-size: 8px;
+        background-color: inherit;
+        border: 1px solid #8c4605;
+        color: #8c4605;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: color 0.5s, background-color 0.5s;
+    }
+
+    .presentation .product-presentation h1 {
+        margin: 0;
+        font-size: 6vw;
+        width: 80%;
+    }
+
+    .presentation .product-presentation p {
+        font-size: 3vw;
+        color: #e9e9e9
+    }
+
+    .first .product-presentation .small-images .small img {
+        width: 80px;
+        border-radius: 5px;
+        transition: filter 0.5s, background-color 0.5s;
+    }
+
+    footer h3 {
+        font-size: 2vw;
+    }
+
+    footer p {
+        font-size: 2vw;
+    }
+
+    .popup img {
+        width: 60px;
+        margin: -5px -20px;
+        margin-top: 40px;
+    }
+    .popup h2 {
+        position: absolute;
+        top: 1rem;
+        right: 3.5rem;
+        font-size: 0.5rem;
+    }
+    .popup .Rec {
+        position: absolute;
+        top: 8.25rem;
+        right: -1rem;
+        font-size: 0.05rem;
+    }
+
+}
